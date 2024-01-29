@@ -33,7 +33,8 @@ class Drink:
             raise ValueError(f'Invalid flavor provided in {flavors}')
         self._flavors = set(flavors)
 
-    def add_flavor(self, flavor:str, amount:float):
+    def add_flavor(self, flavor:str):
         if flavor not in Drink.flavors:
             raise ValueError('Invalid flavor')
-        self._flavors[flavor] = amount
+        self._flavors.add(flavor)
+        return self
