@@ -1,6 +1,6 @@
 import pytest
 
-from Order import Order
+from API.Order import Order
 
 # Fixtures https://doc.pytest.org/en/latest/reference/fixtures.html#fixture
 
