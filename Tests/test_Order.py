@@ -5,7 +5,7 @@ from Order import Order
 # Fixtures https://doc.pytest.org/en/latest/reference/fixtures.html#fixture
 
 @pytest.fixture
-def order():
+def test_order(test_drink_size):
     return Order()
 
 # class TestOrder:

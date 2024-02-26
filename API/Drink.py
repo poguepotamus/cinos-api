@@ -3,14 +3,18 @@ class Drink:
     bases = ['water', 'sbrite', 'pokeacola', 'Mr. Salt', 'hill fog', 'leaf wine']
     flavors = ['lemon', 'cherry', 'strawberry', 'mint', 'blueberry', 'lime']
 
-    def __init__(self, base, flavors:set=None, total:float=1):
+    def __init__(self, base, size:str, flavors:set=None, total:float=1):
         # If our base isn't provided, we raise an exception
         if base not in Drink.bases:
             raise ValueError('Invalid drink base')
         self._base = base
 
         # Setting our flavors. Defaults to an empty set
-        self._flavors = flavors or {}
+        # self._flavors = flavors or set()
+        if flavors:
+            self._flavors = flavors
+        else:
+            self._flavors = set()
 
         self._total = total
 
@@ -21,7 +25,7 @@ class Drink:
         return self._base
 
     def get_total(self):
-        return self._total
+        return len(drink.get_flavors()) * .15 + 1.70
 
     def get_num_flavors(self):
         return len(self._flavors)
