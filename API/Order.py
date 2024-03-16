@@ -1,4 +1,11 @@
+"""Import location:
+    Place all your imports at the top of the file
+"""
 from API.Drink import Drink
+
+"""Class definition:
+    Place all your class definitions
+"""
 
 class Order:
     def __init__(self):
@@ -20,3 +27,11 @@ class Order:
     def remove_item(self, index:int):
         self._items.pop(index)
         return self
+
+"""Place any script code at the bottom of the file. In this case, there is no script code.
+If there we're, it may looks like
+
+if __name__ == "__main__":
+    # script code
+    pass
+"""
